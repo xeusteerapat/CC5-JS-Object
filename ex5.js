@@ -1,16 +1,16 @@
 let menu = {
   width: 200,
   height: 300,
-  title: "My menu"
+  title: "My Menu",
+  money: 5000
 };
 
 function multipleNumeric(obj, times) {
-  for (let i in obj) {
-    if (isNaN(obj[i])) {
-      continue;
+  for (let key in obj) {
+    if (typeof obj[key] === "number") {
+      obj[key] *= times;
     }
-    obj[i] *= times;
   }
   return obj;
 }
-console.log(multipleNumeric(menu, 4));
+console.log(multipleNumeric(menu, 3));

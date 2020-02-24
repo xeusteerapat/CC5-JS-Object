@@ -13,3 +13,5 @@ function sum(obj) {
 }
 
 console.log(sum(salaries));
+b = Object.values(salaries).reduce((acc, current) => acc + current);
+console.log(b);
